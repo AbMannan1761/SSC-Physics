@@ -1223,6 +1223,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!isDrawing || currentAnnotTool === 'browse') return;
       e.preventDefault();
       const pt = getCoords(e);
+      const prevPt = { x: lastPt.x, y: lastPt.y };
       lastPt = pt;
 
       if (currentAnnotTool === 'texthighlight' && previewCtx) {
@@ -1256,13 +1257,22 @@ document.addEventListener('DOMContentLoaded', () => {
         previewCtx.lineTo(x2, y);
         previewCtx.stroke();
       } else if (currentAnnotTool === 'pen') {
+        ctx.globalCompositeOperation = 'source-over';
+        ctx.strokeStyle = currentAnnotColor;
+        ctx.lineWidth = 3.5;
+        ctx.lineCap = 'round';
+        ctx.lineJoin = 'round';
         ctx.beginPath();
-        ctx.moveTo(startPt.x === lastPt.x ? pt.x : lastPt.x, startPt.y === lastPt.y ? pt.y : lastPt.y);
+        ctx.moveTo(prevPt.x, prevPt.y);
         ctx.lineTo(pt.x, pt.y);
         ctx.stroke();
       } else if (currentAnnotTool === 'eraser') {
+        ctx.globalCompositeOperation = 'destination-out';
+        ctx.lineWidth = 32;
+        ctx.lineCap = 'round';
+        ctx.lineJoin = 'round';
         ctx.beginPath();
-        ctx.moveTo(lastPt.x, lastPt.y);
+        ctx.moveTo(prevPt.x, prevPt.y);
         ctx.lineTo(pt.x, pt.y);
         ctx.stroke();
       }
@@ -1670,6 +1680,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function selectTool(toolName) {
       currentAnnotTool = toolName;
+      if (previewCtx && previewCanvas) {
+        previewCtx.clearRect(0, 0, previewCanvas.width, previewCanvas.height);
+      }
       Object.keys(toolBtns).forEach(t => {
         if (toolBtns[t]) {
           if (t === toolName) toolBtns[t].classList.add('active');
