@@ -1,0 +1,48 @@
+{
+  "segments": [
+    {
+      "type": "text",
+      "value": "১৫০"
+    },
+    {
+      "type": "text",
+      "value": "পদার্থবিজ্ঞান"
+    },
+    {
+      "type": "text",
+      "value": "কাজেই আমরা লিখতে পারি"
+    },
+    {
+      "type": "element",
+      "label": "equation_1_proportionality_relation_and_bulk_modulus_formulae_P_proportional_to_V_minus_V0_by_V0_and_P_equals_B_times_V_minus_V0_by_V0_with_negative_sign_implied_in_context_of_compression_or_as_written_in_text_as_P_equals_B_times_V_minus_V0_by_V0_where_B_is_bulk_modulus_and_units_are_Nm_minus_2_or_Pascal_and_diagram_showing_compression_of_gas_in_a_cylinder_with_piston_and_weight_labeled_V0_and_V_and_caption_figure_5_12_compressed_air_under_pressure_and_section_5_6_three_states_of_matter_solid_liquid_and_gas_and_introductory_text_about_atomic_structure_and_constituents_like_electrons_nuclei_protons_neutrons_quarks_and_strings_and_page_number_2022_at_bottom_right_corner"
+    },
+    {
+      "type": "element",
+      "label": "equation_1_P_proportional_to_V_minus_V0_by_V0_and_P_equals_B_times_V_minus_V0_by_V0_with_negative_sign_implied_in_context_of_compression_or_as_written_in_text_as_P_equals_B_times_V_minus_V0_by_V0_where_B_is_bulk_modulus_and_units_are_Nm_minus_2_or_Pascal_and_diagram_showing_compression_of_gas_in_a_cylinder_with_piston_and_weight_labeled_V0_and_V_and_caption_figure_5_12_compressed_air_under_pressure_and_section_5_6_three_states_of_matter_solid_liquid_and_gas_and_introductory_text_about_atomic_structure_and_constituents_like_electrons_nuclei_protons_neutrons_quarks_and_strings_and_page_number_2022_at_bottom_right_corner_box_2d_143_420_240_577"
+    },
+    {
+      "type": "text",
+      "value": "এখানে B হচ্ছে ধুবক এবং এই ধুবকের নাম বাল্ক মডুলাস বা আয়তন গুণাঙ্ক (Bulk Modulus)। B এর একক হচ্ছে Nm⁻² কিংবা প্যাসকেল।"
+    },
+    {
+      "type": "element",
+      "label": "diagram_showing_compression_of_gas_in_a_cylinder_with_piston_and_weight_labeled_V0_and_V_and_caption_figure_5_12_compressed_air_under_pressure_and_section_5_6_three_states_of_matter_solid_liquid_and_gas_and_introductory_text_about_atomic_structure_and_constituents_like_electrons_nuclei_protons_neutrons_quarks_and_strings_and_page_number_2022_at_bottom_right_corner_box_2d_337_168_544_816"
+    },
+    {
+      "type": "text",
+      "value": "চিত্র ৫.১২: আবদ্ধ বাতাসে চাপ প্রয়োগ করলে বাতাস সংকুচিত হয়।"
+    },
+    {
+      "type": "text",
+      "value": "৫.৬ পদার্থের তিন অবস্থা: কঠিন, তরল এবং গ্যাস (The three states of Matter: Solid, Liquid and Gas)"
+    },
+    {
+      "type": "text",
+      "value": "তোমরা নিশ্চয়ই জানো বিশ্বের সবকিছু তৈরি হয়েছে অণু দিয়ে। (অবশ্য অণু মৌলিক কণা নয়, অণু তৈরি হয়েছে পরমাণু দিয়ে, পরমাণু তৈরি হয়েছে ইলেকট্রন এবং নিউক্লিয়াস দিয়ে, নিউক্লিয়াস তৈরি হয়েছে প্রোটন এবং নিউট্রন দিয়ে, প্রোটন এবং নিউট্রন তৈরি হয়েছে কোয়ার্ক দিয়ে এবং বিজ্ঞানীরা ধারণা করছেন ইলেকট্রন কিংবা কোয়ার্ক তৈরি হয়েছে স্ট্রিং দিয়ে।) যেহেতু একটা পদার্থের ধর্ম তার অণুতে বজায় থাকে, তাই আমরা অণুকেই পদার্থের সবচেয়ে ছোট একক হিসেবে ধরে নিই। যেমন-"
+    },
+    {
+      "type": "text",
+      "value": "২০২২"
+    }
+  ]
+}

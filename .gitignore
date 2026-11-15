@@ -1,0 +1,26 @@
+# Root OCR cache (tracked inside app/ocr_cache for the web app)
+/ocr_cache/
+
+# Large PDF and DOCX files (>100MB exceeds GitHub hard limit)
+*.pdf
+*.docx
+
+# Temporary folders and unorganized materials
+Physics book part/
+physics guide/
+পদার্থবিজ্ঞান-20260206T043628Z-1-001/
+
+# Python cache & virtual environments
+__pycache__/
+*.py[cod]
+.env
+.venv/
+env/
+venv/
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/

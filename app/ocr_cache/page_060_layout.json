@@ -1,0 +1,68 @@
+{
+  "segments": [
+    {
+      "type": "text",
+      "value": "৫৬"
+    },
+    {
+      "type": "text",
+      "value": "পদার্থবিজ্ঞান"
+    },
+    {
+      "type": "text",
+      "value": "৮. আবার মারবেল, পেন্সিল বা কলমটি ঢালু পৃষ্ঠে গড়িয়ে দাও, সংখ্যা গুণে সময় পরিমাপ করে আবার গড় দ্রুতি বের করো। এভাবে ঢালটা ধীরে ধীরে বাড়িয়ে প্রত্যেকবার গড় দ্রুতি বের করো।"
+    },
+    {
+      "type": "text",
+      "value": "৯. একটি গ্রাফ পেপারে X অক্ষে sinθ এবং Y অক্ষে গড় দ্রুতি স্থাপন করে একটি লেখচিত্র আঁকো। লেখচিত্র থেকে যেকোনো ঢালের জন্য দ্রুতি বের করো।"
+    },
+    {
+      "type": "element",
+      "label": "table of data collection for experiment with columns for path, distance, height, sin theta, time, speed, and average speed, with rows for three trials each for three different slopes/conditions, totaling nine rows of data entry space plus header row and sub-header rows for trial numbers 1, 2, 3 repeated three times in the first column, and the table is enclosed in a blue border box with the experiment instructions above it and discussion questions below it within the same box structure, but the table itself is the primary element here covering the middle section of the page content area. The table has headers: পাঠ, দূরত্ব L (cm), উচ্চতা h (cm), sinθ = h/L, সময় t (s), দ্রুতি = দূরত্ব/ সময় (m/s), গড় দ্রুতি (m/s). The first column contains repeating 1, 2, 3 for three sets of trials. The table is bounded by approximately [253, 129, 550, 867]."
+    },
+    {
+      "type": "text",
+      "value": "আলোচনা: ঢালের সাথে দ্রুতির কী সম্পর্ক সেটি আলোচনা করো। পরীক্ষাটি আরো নিখুঁতভাবে করার জন্য আর কী কী করা সম্ভব আলোচনা করো।"
+    },
+    {
+      "type": "element",
+      "label": "magnifying glass icon representing research or investigation activity, located at [635, 100, 685, 170]"
+    },
+    {
+      "type": "text",
+      "value": "অনুসন্ধান ২.০২"
+    },
+    {
+      "type": "text",
+      "value": "বিভিন্ন প্রকার গতি নিয়ে খেলা"
+    },
+    {
+      "type": "text",
+      "value": "উদ্দেশ্য: খেলার মাধ্যমে নানা ধরনের গতির পার্থক্য খুঁজে বের করা।"
+    },
+    {
+      "type": "text",
+      "value": "যন্ত্রপাতি: একটুখানি খালি জায়গা"
+    },
+    {
+      "type": "text",
+      "value": "কাজের ধারা:"
+    },
+    {
+      "type": "text",
+      "value": "১. বিভিন্ন ধরনের গতি বোঝানোর জন্য নির্দিষ্ট কার্যক্রম ঠিক করে নিতে হবে:"
+    },
+    {
+      "type": "text",
+      "value": "রৈখিক গতি: সোজা দৌড়ে যেতে হবে, কোথাও বাধা পেলে ঘুরে উল্টা দিকে সোজা দৌড়ে যাবে।"
+    },
+    {
+      "type": "text",
+      "value": "ঘূর্ণন গতি: দুই হাত দুই পাশে ছড়িয়ে এক জায়গায় ঘুরতে থাকবে।"
+    },
+    {
+      "type": "text",
+      "value": "৯২"
+    }
+  ]
+}

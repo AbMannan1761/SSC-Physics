@@ -1,0 +1,91 @@
+{
+  "segments": [
+    {
+      "type": "text",
+      "value": "১৫৬"
+    },
+    {
+      "type": "text",
+      "value": "পদার্থবিজ্ঞান"
+    },
+    {
+      "type": "text",
+      "value": "চিত্র থেকে নিচের ৪ ও ৫ নং প্রশ্নের উত্তর দাও"
+    },
+    {
+      "type": "element",
+      "value": "diagram",
+      "box_2d": [
+        153,
+        182,
+        356,
+        427
+      ],
+      "label": "diagram"
+    },
+    {
+      "type": "text",
+      "value": "চিত্র ৫.১৭"
+    },
+    {
+      "type": "text",
+      "value": "৪. পাত্রের নিম্নতলে কী পরিমাণ চাপ অনুভূত হবে?"
+    },
+    {
+      "type": "text",
+      "value": "(ক) 98 Pa"
+    },
+    {
+      "type": "text",
+      "value": "(খ) 980 Pa"
+    },
+    {
+      "type": "text",
+      "value": "(গ) 196 Pa"
+    },
+    {
+      "type": "text",
+      "value": "(ঘ) 1960 Pa"
+    },
+    {
+      "type": "text",
+      "value": "৫. যদি পাত্রের মুখে F বল প্রয়োগ করা হয় তবে বল:"
+    },
+    {
+      "type": "text",
+      "value": "i. শুধু পাত্রের তলায় চাপ প্রয়োগ করবে"
+    },
+    {
+      "type": "text",
+      "value": "ii. শুধু পাত্রের বক্র তলে চাপ প্রয়োগ করবে"
+    },
+    {
+      "type": "text",
+      "value": "iii. পাত্রের সকল দিকে চাপ প্রয়োগ করবে"
+    },
+    {
+      "type": "text",
+      "value": "নিচের কোনটি সঠিক?"
+    },
+    {
+      "type": "text",
+      "value": "(ক) i"
+    },
+    {
+      "type": "text",
+      "value": "(খ) iii"
+    },
+    {
+      "type": "text",
+      "value": "(গ) ii ও iii"
+    },
+    {
+      "type": "text",
+      "value": "(ঘ) i, ii ও iii"
+    },
+    {
+      "type": "text",
+      "value": "৯২৭"
+    }
+  ]
+}

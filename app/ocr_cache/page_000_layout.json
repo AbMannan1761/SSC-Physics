@@ -1,0 +1,40 @@
+{
+  "segments": [
+    {
+      "type": "text",
+      "value": "পদার্থবিজ্ঞান"
+    },
+    {
+      "type": "text",
+      "value": "নবম ও দশম শ্রেণি"
+    },
+    {
+      "type": "element",
+      "label": "diagram with physics concepts and students illustration representing physics topics like optics, relativity, electromagnetism, gravity, and mechanics, including a rocket and a wheelchair user with a magnet, and a student with a pendulum clock and a toy car, all set against a blue background with scientific formulas written in the sky area above the students, and a logo at the bottom left corner with text next to it at the bottom right corner of the page."
+    },
+    {
+      "type": "element",
+      "box_2d": [
+        260,
+        147,
+        830,
+        852
+      ],
+      "label": "diagram"
+    },
+    {
+      "type": "element",
+      "box_2d": [
+        871,
+        108,
+        966,
+        232
+      ],
+      "label": "logo"
+    },
+    {
+      "type": "text",
+      "value": "জাতীয় শিক্ষাক্রম ও পাঠ্যপুস্তক বোর্ড, বাংলাদেশ"
+    }
+  ]
+}

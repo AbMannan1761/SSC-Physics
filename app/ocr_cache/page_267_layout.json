@@ -1,0 +1,56 @@
+{
+  "segments": [
+    {
+      "type": "text",
+      "value": "আলোর প্রতিসরণ"
+    },
+    {
+      "type": "text",
+      "value": "২৬৩"
+    },
+    {
+      "type": "element",
+      "label": "diagram of lens refraction at 2f distance from lens center O, showing object XY and image X'Y'. The object is at 2f distance, and the image is formed at 2f distance on the other side, with equal size and inverted orientation. The diagram includes labels X, Y, C, O, F, f, 2f, Y', X'. The diagram is located at [ymin, xmin, ymax, xmax] = [108, 255, 323, 735]"
+    },
+    {
+      "type": "text",
+      "value": "চিত্র৯.২৫: ঠিক ফোকাস দূরত্বের দ্বিগুণ দূরত্বে কোনো বস্তু রাখা হলে তার প্রতিবিম্বটি হবে বস্তুটির সমান।"
+    },
+    {
+      "type": "text",
+      "value": "এবং তার আকার বড় হতে থাকবে। যেহেতু এই প্রতিবিম্বের ভেতর দিয়ে সত্যিকার আলোক রশ্মি যায় তাই এটি বাস্তব প্রতিবিম্ব, এবং ছবিতে স্পষ্ট দেখা যাচ্ছে প্রতিবিম্বটি উল্টো অর্থাৎ , প্রতিবিম্বটি হবে"
+    },
+    {
+      "type": "text",
+      "value": "(a) ফোকাস দূরত্বের দ্বিগুণ দূরত্বে অবস্থিত;"
+    },
+    {
+      "type": "text",
+      "value": "(b) বাস্তব;"
+    },
+    {
+      "type": "text",
+      "value": "(c) উল্টো, এবং"
+    },
+    {
+      "type": "text",
+      "value": "(d) বস্তুর সমান আকারের।"
+    },
+    {
+      "type": "text",
+      "value": "(iii) এখন আমরা দেখি বস্তুটি যদি ফোকাস দূরত্বের দ্বিগুণ দূরত্বের বাইরে থাকে তাহলে তার কী ধরনের প্রতিবিম্ব কোথায় তৈরি হয়। এই প্রতিবিম্বটি আঁকার পদ্ধতি ঠিক আগেরটির মতো শুধু (চিত্র ৯.২৬) বস্তুটিকে বসাতে হবে ফোকাস দূরত্বের দ্বিগুণ দূরত্বের বাইরে। আমরা আগেই বলেছি বস্তুটি যদি ফোকাস দূরত্বের দ্বিগুণ দূরত্বে রাখা হয়, তাহলে তার সমদূরত্বে সমান আকারের একটা প্রতিবিম্ব তৈরি হয়। যতই বস্তুটা দূরে"
+    },
+    {
+      "type": "element",
+      "label": "diagram of lens refraction with object XY placed beyond 2f distance from lens center O, showing a smaller, inverted, real image X'Y' formed between f and 2f on the other side. The diagram includes labels X, Y, C, O, F, F', f, Y', X'. The diagram is located at [ymin, xmin, ymax, xmax] = [635, 455, 845, 838]"
+    },
+    {
+      "type": "text",
+      "value": "চিত্র৯.২৬: দ্বিগুণ ফোকাস দূরত্বের বাইরে বস্তু রাখা হলে তার ছোট, উল্টো ও বাস্তব প্রতিবিম্ব তৈরি হয়।"
+    },
+    {
+      "type": "text",
+      "value": "২০২৭"
+    }
+  ]
+}

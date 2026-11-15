@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PhysicsCore Pro | SSC Physics Interactive Master Cockpit</title>
+  
+  <!-- Modern Font & KaTeX for LaTeX Physics Formulas -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+
+  <!-- App Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Ambient background glow accents -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+
+  <div class="app-container">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar" id="appSidebar">
+      <div class="brand-header">
+        <div style="display:flex; align-items:center; gap:8px; flex:1; min-width:0;">
+          <div class="brand-logo-icon">⚛️</div>
+          <div class="brand-text">
+            <h1>PhysicsCore Pro</h1>
+            <p>SSC Master Teaching Edition</p>
+          </div>
+        </div>
+        <button class="btn-sidebar-collapse" id="btnCollapseSidebar" title="প্যানেল বাঁয়ে গুটিয়ে রাখুন">◀</button>
+      </div>
+
+      <div class="nav-section-title">সূচীপত্র</div>
+      <ul class="nav-menu" id="navMenuList">
+        <!-- Chapters loaded dynamically -->
+      </ul>
+    </aside>
+
+    <!-- Main Workspace -->
+    <main class="main-workspace">
+      <!-- Top Bar for Teachers -->
+      <header class="top-bar">
+        <div class="top-left-title">
+          <button class="btn-sidebar-toggle-top" id="btnToggleSidebarTop" title="সূচিপত্র প্যানেল দেখান / লুকান">☰</button>
+          <span class="current-module-badge" id="headerBadge">অধ্যায় ১</span>
+          <h2 class="current-title" id="headerTitle">ভৌত রাশি এবং পরিমাপ</h2>
+        </div>
+
+        <div class="top-actions">
+          <button class="btn btn-primary btn-icon" id="btnSmartBoard" title="স্মার্ট বোর্ড (Smart Board)">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="3" width="20" height="14" rx="2"></rect>
+              <line x1="8" y1="21" x2="16" y2="21"></line>
+              <line x1="12" y1="17" x2="12" y2="21"></line>
+              <line x1="6" y1="8" x2="10" y2="8"></line>
+              <line x1="6" y1="12" x2="14" y2="12"></line>
+            </svg>
+          </button>
+          <button class="btn btn-glass btn-icon" id="btnOpenSearchModal" title="বই সার্চ (Book Search)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+          <button class="btn btn-glass btn-icon" id="btnAdminModal" title="ভিডিও লেকচার অ্যাডমিন (Video Admin)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="3"></circle>
+              <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+            </svg>
+          </button>
+          <button class="btn btn-glass btn-icon" id="btnThemeToggle" title="ডার্ক / আনডার্ক (লাইট) মোড পরিবর্তন">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </button>
+          <button class="btn btn-glass btn-icon" id="btnFullscreen" title="ফুলস্ক্রিন প্রেজেন্টেশন (Fullscreen)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path>
+            </svg>
+          </button>
+        </div>
+      </header>
+
+      <!-- Content Area -->
+      <section class="content-viewport">
+        <!-- Module Navigation Tabs -->
+        <div class="view-tabs">
+          <button class="tab-btn active" data-tab="book">📖 মূল বই রিডার</button>
+          <button class="tab-btn" data-tab="lab">🧪 সিমুলেশন ল্যাব</button>
+          <button class="tab-btn" data-tab="traps">⚠️ ট্রিকি কনসেপ্ট ও ফাঁদ</button>
+          <button class="tab-btn" data-tab="olympiad">🏆 অলিম্পিয়াড ব্যাংক</button>
+          <button class="tab-btn" data-tab="formulas">📐 মূল সূত্রাবলী</button>
+        </div>
+
+        <!-- Dynamic View Container -->
+        <div id="viewArea">
+          <!-- Views populated by app.js -->
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Admin Video Management Modal -->
+  <div class="admin-modal-overlay" id="adminModalOverlay">
+    <div class="admin-modal">
+      <div class="admin-modal-header">
+        <div style="display:flex; align-items:center; gap:10px;">
+          <span style="font-size:1.5rem;">⚙️</span>
+          <div>
+            <h3 style="font-size:1.2rem; font-weight:700; color:#fff;">ভিডিও অ্যাডমিন প্যানেল</h3>
+            <p style="font-size:0.8rem; color:var(--text-muted);">ইউটিউব প্রাইভেট/আনলিস্টেড ভিডিও লিঙ্ক বা ড্রাইভ ভিডিও লেকচার যুক্ত করুন</p>
+          </div>
+        </div>
+        <button class="btn btn-glass" id="btnCloseAdminModal" style="padding:4px 10px; font-size:1.1rem;">✕</button>
+      </div>
+      <div class="admin-modal-body">
+        <div style="margin-bottom:14px;">
+          <label style="display:block; font-size:0.88rem; color:var(--text-muted); margin-bottom:6px;">অধ্যায় নির্বাচন করুন:</label>
+          <select id="adminChapterSelect" class="admin-input" style="cursor:pointer;">
+            <!-- Loaded dynamically -->
+          </select>
+        </div>
+        <div style="margin-bottom:14px;">
+          <label style="display:block; font-size:0.88rem; color:var(--text-muted); margin-bottom:6px;">লেকচার শিরোনাম:</label>
+          <input type="text" id="adminVideoTitle" class="admin-input" placeholder="যেমন: ১.১ পদার্থবিজ্ঞান পরিচিতি ও পরিমাপের বেসিক্স">
+        </div>
+        <div style="margin-bottom:18px;">
+          <label style="display:block; font-size:0.88rem; color:var(--text-muted); margin-bottom:6px;">ইউটিউব ভিডিও URL বা Embed লিংক বা Video ID:</label>
+          <input type="text" id="adminVideoUrl" class="admin-input" placeholder="https://www.youtube.com/watch?v=... অথবা https://youtu.be/... বা Embed কোড">
+          <p style="font-size:0.75rem; color:var(--accent-cyan); margin-top:4px;">💡 যেকোনো সাধারণ বা আনলিস্টেড/প্রাইভেট ইউটিউব লিংক পেস্ট করলেই এটি স্বয়ংক্রিয়ভাবে প্লেয়ারে সেট হয়ে যাবে।</p>
+        </div>
+        <div style="display:flex; justify-content:flex-end; gap:10px;">
+          <button class="btn btn-glass" id="btnCancelAdmin">বাতিল</button>
+          <button class="btn btn-primary" id="btnSaveAdminVideo">💾 সেভ ও আপডেট করুন</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Book Search Modal -->
+  <div class="admin-modal-overlay" id="searchModalOverlay">
+    <div class="admin-modal" style="max-width: 720px; max-height: 85vh; display: flex; flex-direction: column;">
+      <div class="admin-modal-header">
+        <div style="display:flex; align-items:center; gap:10px;">
+          <span style="font-size:1.5rem;">🔍</span>
+          <div>
+            <h3 style="font-size:1.2rem; font-weight:700; color:#fff;">বইয়ের বিষয়বস্তু দিয়ে সার্চ করুন</h3>
+            <p style="font-size:0.8rem; color:var(--text-muted);">যেকোনো শব্দ বা বিষয় লিখুন (যেমন: ভার্নিয়ার, ত্বরণ, আর্কিমিডিস, রোধ, লেন্স, তেজস্ক্রিয়তা)</p>
+          </div>
+        </div>
+        <button class="btn btn-glass" id="btnCloseSearchModal" style="padding:4px 10px; font-size:1.1rem;">✕</button>
+      </div>
+      <div class="admin-modal-body" style="flex:1; display:flex; flex-direction:column; overflow:hidden; padding-bottom:14px;">
+        <div style="position:relative; margin-bottom:14px;">
+          <input type="text" id="inputBookSearch" class="admin-input" placeholder="সার্চ করার শব্দ লিখুন..." autofocus style="padding-left:38px; font-size:1.05rem;">
+          <span style="position:absolute; left:12px; top:11px; color:var(--text-muted); font-size:1.1rem;">🔍</span>
+        </div>
+        <div id="searchResultsCount" style="font-size:0.85rem; color:var(--accent-cyan); margin-bottom:10px; font-weight:600;"></div>
+        <div id="searchResultsList" style="flex:1; overflow-y:auto; padding-right:4px;">
+          <div style="text-align:center; padding:35px 20px; color:var(--text-muted);">
+            উপরে যেকোনো বিষয়ের নাম লিখলে বইয়ের কোন কোন পাতায় সেই বিষয়টি আছে তা সাথে সাথে দেখানো হবে।
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- High-Res Book Zoom / Fullscreen Lightbox Modal -->
+  <div class="admin-modal-overlay" id="bookZoomModalOverlay">
+    <div class="book-zoom-modal-content">
+      <div class="book-zoom-modal-header">
+        <div style="display:flex; align-items:center; gap:12px;">
+          <span style="font-size:1.4rem;">📖</span>
+          <div>
+            <h3 style="font-size:1.15rem; font-weight:700; color:#fff;" id="zoomModalTitle">মূল পাঠ্যবই (হাই-রেজ্যুলেশন পূর্ণ পৃষ্ঠা)</h3>
+            <p style="font-size:0.78rem; color:var(--accent-cyan);" id="zoomModalSubtitle">নবম ও দশম শ্রেণি: পদার্থবিজ্ঞান (NCTB)</p>
+          </div>
+        </div>
+
+        <!-- Zoom & Page Navigation Controls -->
+        <div class="zoom-modal-controls">
+          <button class="btn btn-glass" id="btnModalPrevPage" style="padding:5px 12px; font-size:0.82rem;">◀ পূর্ববর্তী</button>
+          <span class="page-indicator-pill" id="zoomModalPageDisplay" style="padding:4px 12px; font-size:0.88rem; font-weight:700;">পৃষ্ঠা: 1</span>
+          <button class="btn btn-glass" id="btnModalNextPage" style="padding:5px 12px; font-size:0.82rem;">পরবর্তী ▶</button>
+
+          <div style="height:20px; width:1px; background:var(--border-glass); margin:0 4px;"></div>
+
+          <button class="btn btn-glass" id="btnZoomOut" title="ছোট করুন (Zoom Out)" style="padding:5px 10px; font-size:0.9rem;">➖</button>
+          <span id="zoomLevelIndicator" style="font-family:var(--font-mono); font-size:0.82rem; min-width:44px; text-align:center; color:var(--accent-cyan);">100%</span>
+          <button class="btn btn-glass" id="btnZoomIn" title="বড় করুন (Zoom In)" style="padding:5px 10px; font-size:0.9rem;">➕</button>
+          <button class="btn btn-glass" id="btnZoomReset" title="মানানসই আকার (Fit to Screen)" style="padding:5px 10px; font-size:0.82rem;">↺ রিসেট</button>
+
+          <div style="height:20px; width:1px; background:var(--border-glass); margin:0 4px;"></div>
+
+          <button class="btn btn-primary" id="btnOpenInSmartboard" style="padding:5px 14px; font-size:0.82rem;" title="এই পৃষ্ঠাটি স্মার্ট বোর্ডে পাঠিয়ে লিখুন">
+            🖍️ বোর্ডে আঁকুন
+          </button>
+
+          <button class="btn btn-glass" id="btnCloseZoomModal" style="padding:5px 12px; font-size:1.1rem; color:#f43f5e;" title="বন্ধ করুন (Esc)">✕</button>
+        </div>
+      </div>
+
+      <div class="book-zoom-modal-body" id="zoomModalBody">
+        <button class="page-nav-floating modal-float btn-page-float-prev" id="btnModalFloatPrev" title="পূর্ববর্তী পৃষ্ঠা (আগের পাতা)">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
+
+        <div class="zoom-image-container" id="zoomImageContainer">
+          <img id="zoomBookPageImg" src="" alt="Textbook Page">
+        </div>
+
+        <button class="page-nav-floating modal-float btn-page-float-next" id="btnModalFloatNext" title="পরবর্তী পৃষ্ঠা (পরের পাতা)">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Full-Featured Interactive Smart Board Modal Panel -->
+  <div class="smartboard-overlay" id="smartboardOverlay">
+    <div class="smartboard-container">
+      <!-- Smart Board Top Floating Bar -->
+      <div class="smartboard-topbar">
+        <div style="display:flex; align-items:center; gap:12px;">
+          <div style="font-size:1.4rem;">🖥️</div>
+          <div>
+            <h3 style="font-size:1.1rem; font-weight:700; color:#fff;">টিচার স্মার্ট বোর্ড (Smart Classroom Board)</h3>
+            <p style="font-size:0.75rem; color:var(--accent-cyan);" id="sbCurrentChapterIndicator">নবম-দশম শ্রেণি: পদার্থবিজ্ঞান ক্লাস</p>
+          </div>
+        </div>
+
+        <!-- Board Background Themes -->
+        <div style="display:flex; align-items:center; gap:8px;">
+          <span style="font-size:0.8rem; color:var(--text-muted);">বোর্ড থিম:</span>
+          <button class="sb-theme-btn active" data-theme="dark" title="ডার্ক বোর্ড" style="background:#090d16;"></button>
+          <button class="sb-theme-btn" data-theme="green" title="গ্রিন চক বোর্ড" style="background:#064e3b;"></button>
+          <button class="sb-theme-btn" data-theme="grid" title="গ্রাফ/গ্রিড বোর্ড" style="background:#1e293b; border:1px dashed #38bdf8;"></button>
+          <button class="sb-theme-btn" data-theme="white" title="হোয়াইট বোর্ড" style="background:#f8fafc; border:1px solid #94a3b8;"></button>
+        </div>
+
+        <div style="display:flex; align-items:center; gap:10px;">
+          <button class="btn btn-glass" id="btnSbSaveImage" style="padding:6px 14px; font-size:0.85rem;" title="বোর্ডের লেখা ছবি আকারে ডাউনলোড করুন">
+            💾 ইমেজ সেভ (PNG)
+          </button>
+          <button class="btn btn-primary" id="btnCloseSmartboard" style="padding:6px 14px; font-size:0.85rem;">
+            ✕ বোর্ড বন্ধ করুন
+          </button>
+        </div>
+      </div>
+
+      <!-- Smart Board Floating Toolbar -->
+      <div class="smartboard-floating-toolbar">
+        <!-- Tool Selection -->
+        <button class="sb-tool-btn active" data-tool="pen" title="কলম (Pen)">✏️</button>
+        <button class="sb-tool-btn" data-tool="highlighter" title="হাইলাইটার (Highlighter)">🖍️</button>
+        <button class="sb-tool-btn" data-tool="line" title="সরলরেখা / ভেক্টর (Line/Arrow)">📏</button>
+        <button class="sb-tool-btn" data-tool="rect" title="আয়তক্ষেত্র (Rectangle)">▭</button>
+        <button class="sb-tool-btn" data-tool="circle" title="বৃত্ত / গোলক (Circle)">◯</button>
+        <button class="sb-tool-btn" data-tool="eraser" title="ইরেজার (Eraser)">🧹</button>
+
+        <div class="sb-divider"></div>
+
+        <!-- Color Palette -->
+        <button class="sb-color-btn active" data-color="#38bdf8" style="background:#38bdf8;" title="সায়ান নীল"></button>
+        <button class="sb-color-btn" data-color="#f43f5e" style="background:#f43f5e;" title="গোলাপী লাল"></button>
+        <button class="sb-color-btn" data-color="#10b981" style="background:#10b981;" title="সবুজ"></button>
+        <button class="sb-color-btn" data-color="#f59e0b" style="background:#f59e0b;" title="হলুদ/কমলা"></button>
+        <button class="sb-color-btn" data-color="#ffffff" style="background:#ffffff;" title="সাদা"></button>
+        <button class="sb-color-btn" data-color="#a855f7" style="background:#a855f7;" title="বেগুনি"></button>
+
+        <div class="sb-divider"></div>
+
+        <!-- Stroke Width Slider -->
+        <div style="display:flex; align-items:center; gap:6px; padding:0 8px;">
+          <span style="font-size:0.75rem; color:var(--text-muted);">সাইজ:</span>
+          <input type="range" class="slider" id="sbStrokeWidth" min="2" max="24" step="1" value="4" style="width:70px;">
+          <span id="sbStrokeVal" style="font-size:0.8rem; font-family:var(--font-mono); color:var(--accent-cyan); min-width:18px;">4</span>
+        </div>
+
+        <div class="sb-divider"></div>
+
+        <!-- Action Controls -->
+        <button class="btn btn-glass" id="btnSbUndo" style="padding:6px 10px; font-size:0.85rem;" title="পূর্বাবস্থায় ফেরান (Undo)">↩ আনডু</button>
+        <button class="btn btn-glass" id="btnSbClear" style="padding:6px 10px; font-size:0.85rem; color:#f43f5e;" title="সম্পূর্ণ বোর্ড মুছুন (Clear All)">🗑️ ক্লিয়ার</button>
+      </div>
+
+      <!-- Actual Smart Board Drawing Canvas -->
+      <div class="smartboard-canvas-wrapper" id="smartboardCanvasWrapper">
+        <canvas id="smartboardCanvas"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <!-- Book Annotation Note / Comment / Link Editor Modal -->
+  <div class="admin-modal-overlay" id="noteEditorOverlay">
+    <div class="admin-modal" style="max-width: 520px;">
+      <div class="admin-modal-header">
+        <div style="display:flex; align-items:center; gap:10px;">
+          <span style="font-size:1.4rem;" id="noteModalIcon">💬</span>
+          <div>
+            <h3 style="font-size:1.1rem; font-weight:700; color:#fff;" id="noteModalTitle">কমেন্ট ও টেক্সট নোট যোগ করুন</h3>
+            <p style="font-size:0.75rem; color:var(--accent-cyan);">বইয়ের যেকোনো অংশে টেক্সট নোট, মন্তব্য বা ওয়েব লিংক পিন করুন</p>
+          </div>
+        </div>
+        <button class="btn btn-glass" id="btnCloseNoteEditor" style="padding:4px 10px; font-size:1.1rem;" title="বন্ধ করুন">✕</button>
+      </div>
+
+      <div class="admin-modal-body">
+        <!-- Type Switcher Tabs -->
+        <div class="note-type-tabs" style="display:flex; gap:8px; margin-bottom:16px;">
+          <button type="button" class="btn btn-glass note-tab-btn active" id="tabNoteComment" style="flex:1; display:flex; align-items:center; justify-content:center; gap:6px; padding:8px 12px; font-weight:600; font-size:0.85rem;">
+            <span>💬</span>
+            <span>কমেন্ট / টেক্সট নোট</span>
+          </button>
+          <button type="button" class="btn btn-glass note-tab-btn" id="tabNoteLink" style="flex:1; display:flex; align-items:center; justify-content:center; gap:6px; padding:8px 12px; font-weight:600; font-size:0.85rem;">
+            <span>🔗</span>
+            <span>ওয়েব বা ভিডিও লিংক</span>
+          </button>
+        </div>
+
+        <!-- Form: Text Comment -->
+        <div id="formSectionComment">
+          <div style="margin-bottom:14px;">
+            <label style="display:block; font-size:0.85rem; color:var(--text-muted); margin-bottom:6px;">আপনার মন্তব্য বা টেক্সট নোট লিখুন:</label>
+            <textarea id="inputNoteText" class="admin-input" rows="4" placeholder="এখানে প্রয়োজনীয় টেক্সট, মন্তব্য, ব্যাখ্যা বা পয়েন্ট লিখুন..." style="resize:vertical; min-height:85px; font-family:inherit; font-size:0.92rem;"></textarea>
+          </div>
+        </div>
+
+        <!-- Form: Link -->
+        <div id="formSectionLink" style="display:none;">
+          <div style="margin-bottom:14px;">
+            <label style="display:block; font-size:0.85rem; color:var(--text-muted); margin-bottom:6px;">লিংক শিরোনাম (যেমন: সিমুলেশন ল্যাব / ইউটিউব ক্লাস):</label>
+            <input type="text" id="inputLinkTitle" class="admin-input" placeholder="ভিডিও বা ওয়েবসাইটের শিরোনাম...">
+          </div>
+          <div style="margin-bottom:14px;">
+            <label style="display:block; font-size:0.85rem; color:var(--text-muted); margin-bottom:6px;">ওয়েব লিংক URL:</label>
+            <input type="url" id="inputLinkUrl" class="admin-input" placeholder="https://www.youtube.com/... অথবা https://...">
+          </div>
+          <div style="margin-bottom:14px;">
+            <label style="display:block; font-size:0.85rem; color:var(--text-muted); margin-bottom:6px;">সংক্ষিপ্ত বিবরণ / নোট (ঐচ্ছিক):</label>
+            <textarea id="inputLinkDesc" class="admin-input" rows="2" placeholder="লিংকটি সম্পর্কে কোনো সংকেত বা নোট..." style="resize:vertical; min-height:55px; font-family:inherit; font-size:0.9rem;"></textarea>
+          </div>
+        </div>
+
+        <!-- Color Selector for Pin Badge -->
+        <div style="display:flex; align-items:center; justify-content:space-between; padding-top:4px; margin-bottom:18px;">
+          <span style="font-size:0.82rem; color:var(--text-muted);">পিনের রঙ:</span>
+          <div class="note-color-picker-row" style="display:flex; gap:8px;">
+            <button type="button" class="note-modal-color-btn active" data-color="#facc15" style="--c:#facc15;" title="হলুদ"></button>
+            <button type="button" class="note-modal-color-btn" data-color="#38bdf8" style="--c:#38bdf8;" title="আকাশি"></button>
+            <button type="button" class="note-modal-color-btn" data-color="#4ade80" style="--c:#4ade80;" title="সবুজ"></button>
+            <button type="button" class="note-modal-color-btn" data-color="#f43f5e" style="--c:#f43f5e;" title="গোলাপী / লাল"></button>
+            <button type="button" class="note-modal-color-btn" data-color="#a855f7" style="--c:#a855f7;" title="বেগুনি"></button>
+          </div>
+        </div>
+
+        <!-- Modal Actions -->
+        <div style="display:flex; justify-content:flex-end; gap:10px; border-top:1px solid var(--border-glass); padding-top:14px;">
+          <button type="button" class="btn btn-glass" id="btnCancelNoteModal">বাতিল</button>
+          <button type="button" class="btn btn-primary" id="btnSaveNoteModal" style="padding:8px 18px; font-weight:600;">
+            <span>💾 সেভ করুন</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/data/textbook_content.js"></script>
+  <script src="js/data/book_page_text.js"></script>
+  <script src="js/data/search_index.js"></script>
+  <script src="js/data/olympiad_bank.js"></script>
+  <script src="js/labs/vernier_lab.js"></script>
+  <script src="js/labs/motion_lab.js"></script>
+  <script src="js/labs/force_lab.js"></script>
+  <script src="js/labs/energy_lab.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

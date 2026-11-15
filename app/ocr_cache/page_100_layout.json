@@ -1,0 +1,91 @@
+{
+  "segments": [
+    {
+      "type": "text",
+      "value": "৯৬"
+    },
+    {
+      "type": "text",
+      "value": "পদার্থবিজ্ঞান"
+    },
+    {
+      "type": "text",
+      "value": "নিচের চিত্র অবলম্বনে ৬ ও ৭ নং প্রশ্নের উত্তর দাও:"
+    },
+    {
+      "type": "element",
+      "value": "diagram",
+      "box_2d": [
+        175,
+        197,
+        293,
+        750
+      ],
+      "label": "diagram"
+    },
+    {
+      "type": "text",
+      "value": "1960 N গাড়িটির ওজন বল"
+    },
+    {
+      "type": "text",
+      "value": "৬. গাড়িটির উপর ক্রিয়াশীল লব্ধিবল কত?"
+    },
+    {
+      "type": "text",
+      "value": "(ক) 750 N"
+    },
+    {
+      "type": "text",
+      "value": "(খ) 800 N"
+    },
+    {
+      "type": "text",
+      "value": "(গ) 850 N"
+    },
+    {
+      "type": "text",
+      "value": "(ঘ) 1960 N"
+    },
+    {
+      "type": "text",
+      "value": "৭. গাড়িটির ক্ষেত্রে -"
+    },
+    {
+      "type": "text",
+      "value": "i. ভর 200 kg"
+    },
+    {
+      "type": "text",
+      "value": "ii. ত্বরণ 2.25 ms⁻²"
+    },
+    {
+      "type": "text",
+      "value": "iii. ঘর্ষণ বল শূন্য"
+    },
+    {
+      "type": "text",
+      "value": "নিচের কোনটি সঠিক?"
+    },
+    {
+      "type": "text",
+      "value": "(ক) i"
+    },
+    {
+      "type": "text",
+      "value": "(খ) i ও ii"
+    },
+    {
+      "type": "text",
+      "value": "(গ) i ও iii"
+    },
+    {
+      "type": "text",
+      "value": "(ঘ) ii ও iii"
+    },
+    {
+      "type": "text",
+      "value": "৯২"
+    }
+  ]
+}

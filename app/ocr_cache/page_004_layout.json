@@ -1,0 +1,12 @@
+{
+  "segments": [
+    {
+      "type": "text",
+      "value": "সূচিপত্র"
+    },
+    {
+      "type": "element",
+      "label": "table of contents table containing chapters and page numbers in Bengali script and numerals respectively, with headers 'অধ্যায়', 'শিরোনাম', 'পৃষ্ঠা'. The table rows list chapters from 'প্রথম' to 'ত্রয়োদশ' with corresponding titles and page numbers starting from '১' to '৩৪৬'. The table is bounded by [285, 171, 712, 828]"
+    }
+  ]
+}

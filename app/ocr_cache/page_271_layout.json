@@ -1,0 +1,84 @@
+{
+  "segments": [
+    {
+      "type": "text",
+      "value": "আলোর প্রতিসরণ"
+    },
+    {
+      "type": "text",
+      "value": "২৬৭"
+    },
+    {
+      "type": "element",
+      "label": "diagram/icon of a question mark inside a circle with text next to it reading 'নমুনা প্রশ্ন'. The icon is located at [115, 337, 178, 568]"
+    },
+    {
+      "type": "element",
+      "label": "icon of a circle with four quadrants containing Bengali letters, located at [207, 104, 263, 175]"
+    },
+    {
+      "type": "text",
+      "value": "বহুনির্বাচনি প্রশ্ন"
+    },
+    {
+      "type": "text",
+      "value": "সঠিক উত্তরটির পাশে টিক ( √ ) চিহ্ন দাও"
+    },
+    {
+      "type": "text",
+      "value": "১. ঘন মাধ্যমের ভেতরের বস্তুকে উপরের হালকা মাধ্যম থেকে দেখলে এর প্রতিবিম্ব কোথায় হবে?"
+    },
+    {
+      "type": "text",
+      "value": "(ক) উপরের দিকে উঠে আসবে"
+    },
+    {
+      "type": "text",
+      "value": "(খ) নিচের দিকে সরে যাবে"
+    },
+    {
+      "type": "text",
+      "value": "(গ) একই জায়গায় থাকবে"
+    },
+    {
+      "type": "text",
+      "value": "(ঘ) পাশে সরে যাবে"
+    },
+    {
+      "type": "text",
+      "value": "৯.৩০চিত্র থেকে ২ ও ৩ নং প্রশ্নের উত্তর দাও।"
+    },
+    {
+      "type": "element",
+      "label": "diagram showing light refraction with labels Q, R, P, D, N, N'. Located at [588, 173, 723, 387]"
+    },
+    {
+      "type": "text",
+      "value": "চিত্র ৯.৩০"
+    },
+    {
+      "type": "text",
+      "value": "২. এখানে প্রতিসরণ কোণ কত?"
+    },
+    {
+      "type": "text",
+      "value": "(ক) 180°"
+    },
+    {
+      "type": "text",
+      "value": "(খ) 90°"
+    },
+    {
+      "type": "text",
+      "value": "(গ) 45°"
+    },
+    {
+      "type": "text",
+      "value": "(ঘ) 0°"
+    },
+    {
+      "type": "text",
+      "value": "২০২৩"
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "segments": [
+    {
+      "type": "text",
+      "value": "২৯৬"
+    },
+    {
+      "type": "text",
+      "value": "পদার্থবিজ্ঞান"
+    },
+    {
+      "type": "element",
+      "box_2d": [
+        115,
+        281,
+        252,
+        553
+      ],
+      "label": "diagram"
+    },
+    {
+      "type": "text",
+      "value": "চিত্র ১০.১৭"
+    },
+    {
+      "type": "text",
+      "value": "৪. ১০.১৭ চিত্রে"
+    },
+    {
+      "type": "text",
+      "value": "i. A গোলক থেকে কিছু আধান B গোলকে যাবে"
+    },
+    {
+      "type": "text",
+      "value": "ii. A গোলক থেকে নির্গত বলরেখা B গোলকে যাবে"
+    },
+    {
+      "type": "text",
+      "value": "iii. আধান পার্থক্য সর্বদা সমান থাকে।"
+    },
+    {
+      "type": "text",
+      "value": "নিচের কোনটি সঠিক?"
+    },
+    {
+      "type": "text",
+      "value": "(ক) i"
+    },
+    {
+      "type": "text",
+      "value": "(খ) ii"
+    },
+    {
+      "type": "text",
+      "value": "(গ) i ও iii"
+    },
+    {
+      "type": "text",
+      "value": "(ঘ) i, ii ও iii"
+    },
+    {
+      "type": "text",
+      "value": "৫. একটি 10 µF এর ধারককে 12 V বিভব পার্থক্যে যুক্ত করলে ধারকে কী পরিমাণ শক্তি সঞ্চিত হবে?"
+    },
+    {
+      "type": "text",
+      "value": "(ক) 6×10⁻¹⁰ J"
+    },
+    {
+      "type": "text",
+      "value": "(খ) 6×10⁻⁵ J"
+    },
+    {
+      "type": "text",
+      "value": "(গ) 1.44×10⁻³ J"
+    },
+    {
+      "type": "text",
+      "value": "(ঘ) 7.2×10⁻⁴ J"
+    },
+    {
+      "type": "text",
+      "value": "২৯৭"
+    }
+  ]
+}

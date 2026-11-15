@@ -1,0 +1,126 @@
+{
+  "segments": [
+    {
+      "type": "text",
+      "value": "চল বিদ্যুৎ"
+    },
+    {
+      "type": "text",
+      "value": "৩২৭"
+    },
+    {
+      "type": "text",
+      "value": "৪. বর্তনীতে বৈদ্যুতিক অবস্থা পরিমাপের জন্য ব্যবহার হয়-"
+    },
+    {
+      "type": "text",
+      "value": "i. ভোল্টমিটার"
+    },
+    {
+      "type": "text",
+      "value": "ii. অ্যামিটার"
+    },
+    {
+      "type": "text",
+      "value": "iii. জেনারেটর"
+    },
+    {
+      "type": "text",
+      "value": "কোনটি সঠিক?"
+    },
+    {
+      "type": "text",
+      "value": "(ক) i ও ii"
+    },
+    {
+      "type": "text",
+      "value": "(খ) i ও iii"
+    },
+    {
+      "type": "text",
+      "value": "(গ) ii ও iii"
+    },
+    {
+      "type": "text",
+      "value": "(ঘ) i, ii ও iii"
+    },
+    {
+      "type": "text",
+      "value": "নিচের উদ্দীপকের (চিত্র ১১.১৯) আলোকে ৫ ও ৬ নং প্রশ্নের উত্তর দাও।"
+    },
+    {
+      "type": "text",
+      "value": "৫. বর্তনীর তুল্যরোধ কত?"
+    },
+    {
+      "type": "text",
+      "value": "(ক) 11Ω"
+    },
+    {
+      "type": "text",
+      "value": "(খ) 4Ω"
+    },
+    {
+      "type": "text",
+      "value": "(গ) 1.64Ω"
+    },
+    {
+      "type": "text",
+      "value": "(ঘ) 0.61Ω"
+    },
+    {
+      "type": "element",
+      "box_2d": [
+        441,
+        386,
+        652,
+        843
+      ],
+      "label": "diagram"
+    },
+    {
+      "type": "text",
+      "value": "চিত্র ১১.১৯"
+    },
+    {
+      "type": "text",
+      "value": "৬. উদ্দীপকে-"
+    },
+    {
+      "type": "text",
+      "value": "i. I1=I2"
+    },
+    {
+      "type": "text",
+      "value": "ii. I1 > I2"
+    },
+    {
+      "type": "text",
+      "value": "iii. I1=2I2"
+    },
+    {
+      "type": "text",
+      "value": "নিচের কোনটি সঠিক?"
+    },
+    {
+      "type": "text",
+      "value": "(ক) i ও ii"
+    },
+    {
+      "type": "text",
+      "value": "(খ) ii ও iii"
+    },
+    {
+      "type": "text",
+      "value": "(গ) i ও iii"
+    },
+    {
+      "type": "text",
+      "value": "(ঘ) i, ii ও iii"
+    },
+    {
+      "type": "text",
+      "value": "২০২৩"
+    }
+  ]
+}

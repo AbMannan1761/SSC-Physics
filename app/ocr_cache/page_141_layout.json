@@ -1,0 +1,64 @@
+{
+  "segments": [
+    {
+      "type": "text",
+      "value": "পদার্থের অবস্থা ও চাপ"
+    },
+    {
+      "type": "text",
+      "value": "১৩৭"
+    },
+    {
+      "type": "text",
+      "value": "৫.৩.১ আর্কিমিডিসের নীতি এবং প্লবতা (Archimedes' Principle and Buoyancy)"
+    },
+    {
+      "type": "text",
+      "value": "তোমরা সবাই নিশ্চয়ই আর্কিমিডিসের নীতি এবং সেই সূত্রের পেছনের গল্পটি জানো। নীতিটি সহজ, কোনো বস্তু তরলে নিমজ্জিত করলে সেটি যে পরিমাণ তরল অপসারণ করে সেইটুকু তরলের সমান ওজন বস্তুটির ওজন থেকে কমে যায়। আমরা এখন এই নীতিটি বের করব। ৫.০৪ চিত্রে দেখানো হয়েছে খানিকটা তরল পদার্থে একটা সিলিন্ডার ডোবানো রয়েছে। (এটি সিলিন্ডার না হয়ে অন্য যেকোনো আকৃতির বস্তু হতে পারত, আমরা হিসাবের সুবিধার জন্য সিলিন্ডার নিয়েছি।) ধরা যাক সিলিন্ডারের উচ্চতা h এবং উপরের ও নিচের প্রস্থচ্ছেদের ক্ষেত্রফল A। আমরা কল্পনা করে নিই সিলিন্ডারটি এমনভাবে তরলে ডুবিয়ে রাখা হয়েছে যেন তার উপরের পৃষ্ঠের গভীরতা h1 এবং নিচের পৃষ্ঠের গভীরতা h2। (তরল কিংবা বায়বীয়) পদার্থের চাপ কোনো নির্দিষ্ট দিকে কাজ করে না। এটি সব দিকে কাজ করে। কাজেই সিলিন্ডারের উপরের পৃষ্ঠে নিচের দিকে যে চাপ কাজ করে তার পরিমাণ"
+    },
+    {
+      "type": "element",
+      "label": "diagram of a cylinder submerged in liquid in a beaker with labels h1, h2, h, A, A, and caption below it describing the principle of buoyancy loss of weight equal to displaced liquid weight, and the text below it is the caption: চিত্র ৫.০৪: একটি বস্তু যতটুকু তরল অপসারিত করে তার সমপরিমাণ ওজন হারায়। The diagram is located at [153, 492, 435, 883] and the caption is at [454, 496, 496, 845]. The bounding box for the whole element is [153, 492, 496, 883]. The diagram itself is [153, 492, 435, 883]. The caption is [454, 496, 496, 845]. Let's combine them as one element for the diagram and caption block: [153, 492, 496, 883]"
+    },
+    {
+      "type": "element",
+      "label": "equation P1 = h1ρg and P2 = h2ρg. The bounding box is [653, 447, 741, 552]"
+    },
+    {
+      "type": "text",
+      "value": "P1 = h1ρg"
+    },
+    {
+      "type": "text",
+      "value": "এবং নিচের পৃষ্ঠে উপরের দিকে যে চাপ কাজ করে তার পরিমাণ"
+    },
+    {
+      "type": "text",
+      "value": "P2 = h2ρg"
+    },
+    {
+      "type": "text",
+      "value": "কাজেই সিলিন্ডারে উপর পৃষ্ঠে নিচের দিকে এবং নিচের পৃষ্ঠে উপরের দিকে প্রয়োগ করা বল যথাক্রমে:"
+    },
+    {
+      "type": "element",
+      "label": "equation F1 = AP1 = Ah1ρg and F2 = AP2 = Ah2ρg. The bounding box is [817, 407, 868, 588]"
+    },
+    {
+      "type": "text",
+      "value": "F1 = AP1 = Ah1ρg"
+    },
+    {
+      "type": "text",
+      "value": "F2 = AP2 = Ah2ρg"
+    },
+    {
+      "type": "text",
+      "value": "চারপাশের পৃষ্ঠের উপর কতটুকু বল প্রয়োগ হয়েছে সেটা নিয়ে আমাদের মাথা ঘামাতে হবে না। কারণ সিলিন্ডারটি একদিক থেকে যে বল অনুভব করে অন্যদিক থেকে ঠিক তার বিপরীত পরিমাণ বল"
+    },
+    {
+      "type": "text",
+      "value": "ফর্মা-১৮, পদার্থবিজ্ঞান, ৯ম-১০ম শ্রেণি"
+    }
+  ]
+}

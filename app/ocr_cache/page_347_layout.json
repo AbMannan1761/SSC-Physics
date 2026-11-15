@@ -1,0 +1,108 @@
+{
+  "segments": [
+    {
+      "type": "text",
+      "value": "বিদ্যুতের চৌম্বক ক্রিয়া"
+    },
+    {
+      "type": "text",
+      "value": "৩৪৩"
+    },
+    {
+      "type": "element",
+      "label": "diagram/icon of a question mark inside a circle with the text 'নমুনা প্রশ্ন' next to it, and a small circular icon with four quadrants containing symbols to the left of 'বহুনির্বাচনি প্রশ্ন'. The bounding box covers the header area including the question mark icon and the 'নমুনা প্রশ্ন' text, and the 'বহুনির্বাচনি প্রশ্ন' header area with its icon. [88, 103, 220, 896]"
+    },
+    {
+      "type": "text",
+      "value": "নমুনা প্রশ্ন"
+    },
+    {
+      "type": "text",
+      "value": "বহুনির্বাচনি প্রশ্ন"
+    },
+    {
+      "type": "text",
+      "value": "সঠিক উত্তরটির পাশে টিক (✓) চিহ্ন দাও"
+    },
+    {
+      "type": "text",
+      "value": "১. কোনো চোঙের উপর অন্তরিত তার পেঁচিয়ে সলিনয়েড তৈরি করে তাতে তড়িৎপ্রবাহ চালালে চৌম্বক ক্ষেত্রের কী ঘটবে?"
+    },
+    {
+      "type": "text",
+      "value": "(ক) ঘনীভূত ও দুর্বল হবে"
+    },
+    {
+      "type": "text",
+      "value": "(খ) ঘনীভূত ও শক্তিশালী হবে"
+    },
+    {
+      "type": "text",
+      "value": "(গ) কম ঘনীভূত ও দুর্বল হবে"
+    },
+    {
+      "type": "text",
+      "value": "(ঘ) কম ঘনীভূত কিন্তু শক্তিশালী হবে"
+    },
+    {
+      "type": "text",
+      "value": "২. কোনটির কার্যপ্রণালিতে তাড়িত চৌম্বক আবেশকে ব্যবহার করা হয়?"
+    },
+    {
+      "type": "text",
+      "value": "(ক) ট্রানজিস্টর"
+    },
+    {
+      "type": "text",
+      "value": "(খ) মোটর"
+    },
+    {
+      "type": "text",
+      "value": "(গ) অ্যাম্প্লিফায়ার"
+    },
+    {
+      "type": "text",
+      "value": "(ঘ) ট্রান্সফর্মার"
+    },
+    {
+      "type": "text",
+      "value": "৩. কোন প্রক্রিয়া বা কার্যধারায় তড়িৎচালক শক্তি উৎপন্ন হয়?"
+    },
+    {
+      "type": "text",
+      "value": "(i) কোনো তারকুণ্ডলীর ভেতর একটি চুম্বক স্থির অবস্থায় রাখলে"
+    },
+    {
+      "type": "text",
+      "value": "(ii) কোনো চৌম্বকক্ষেত্রে কোনো তারকুণ্ডলী ঘোরালে"
+    },
+    {
+      "type": "text",
+      "value": "(iii) কোনো স্থির তারকুণ্ডলীর চারদিকে কোনো চুম্বক ঘোরালে"
+    },
+    {
+      "type": "text",
+      "value": "নিচের কোনটি সঠিক?"
+    },
+    {
+      "type": "text",
+      "value": "(ক) i"
+    },
+    {
+      "type": "text",
+      "value": "(খ) ii"
+    },
+    {
+      "type": "text",
+      "value": "(গ) i ও ii"
+    },
+    {
+      "type": "text",
+      "value": "(ঘ) ii ও iii"
+    },
+    {
+      "type": "text",
+      "value": "২০২৩"
+    }
+  ]
+}

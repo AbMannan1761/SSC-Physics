@@ -1,0 +1,120 @@
+{
+  "segments": [
+    {
+      "type": "text",
+      "value": "স্থির বিদ্যুৎ"
+    },
+    {
+      "type": "text",
+      "value": "২৯৫"
+    },
+    {
+      "type": "element",
+      "box_2d": [
+        96,
+        353,
+        161,
+        577
+      ],
+      "label": "diagram"
+    },
+    {
+      "type": "element",
+      "box_2d": [
+        175,
+        105,
+        231,
+        179
+      ],
+      "label": "diagram"
+    },
+    {
+      "type": "text",
+      "value": "বহুনির্বাচনি প্রশ্ন"
+    },
+    {
+      "type": "text",
+      "value": "সঠিক উত্তরটির পাশে টিক (✓) চিহ্ন দাও"
+    },
+    {
+      "type": "text",
+      "value": "১. কোনো বস্তুতে আধানের অস্তিত্ব নির্ণয়ের যন্ত্র হলো-"
+    },
+    {
+      "type": "text",
+      "value": "(ক) অ্যামিটার"
+    },
+    {
+      "type": "text",
+      "value": "(খ) ভোল্টমিটার"
+    },
+    {
+      "type": "text",
+      "value": "(গ) অণুবীক্ষণ যন্ত্র"
+    },
+    {
+      "type": "text",
+      "value": "(ঘ) তড়িৎবীক্ষণ যন্ত্র"
+    },
+    {
+      "type": "text",
+      "value": "২. দুটি আধানের মধ্যকার তড়িৎ বল নিচের কোনটির ওপর নির্ভর করে না?"
+    },
+    {
+      "type": "text",
+      "value": "i. আধান দুটির মধ্যবর্তী দূরত্বের ওপর।"
+    },
+    {
+      "type": "text",
+      "value": "ii. আধান দুটি যে মাধ্যমে অবস্থিত তার প্রকৃতির ওপর।"
+    },
+    {
+      "type": "text",
+      "value": "iii. আধান দুটির ভরের ওপর।"
+    },
+    {
+      "type": "text",
+      "value": "কোনটি সঠিক"
+    },
+    {
+      "type": "text",
+      "value": "(ক) i ও ii"
+    },
+    {
+      "type": "text",
+      "value": "(খ) iii"
+    },
+    {
+      "type": "text",
+      "value": "(গ) ii ও iii"
+    },
+    {
+      "type": "text",
+      "value": "(ঘ) i, iii ও iii"
+    },
+    {
+      "type": "text",
+      "value": "৩. তড়িৎ তীব্রতার একক হচ্ছে"
+    },
+    {
+      "type": "text",
+      "value": "(ক) N"
+    },
+    {
+      "type": "text",
+      "value": "(খ) Nm"
+    },
+    {
+      "type": "text",
+      "value": "(গ) Nm⁻¹"
+    },
+    {
+      "type": "text",
+      "value": "(ঘ) NC⁻¹"
+    },
+    {
+      "type": "text",
+      "value": "২০২৩"
+    }
+  ]
+}

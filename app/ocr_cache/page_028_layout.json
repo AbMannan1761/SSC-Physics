@@ -1,0 +1,36 @@
+{
+  "segments": [
+    {
+      "type": "text",
+      "value": "২৪",
+      "box_2d": [54, 102, 67, 122]
+    },
+    {
+      "type": "text",
+      "value": "পদার্থবিজ্ঞান",
+      "box_2d": [54, 809, 69, 895]
+    },
+    {
+      "type": "element",
+      "value": "diagram",
+      "box_2d": [118, 124, 727, 865],
+      "label": "diagram"
+    },
+    {
+      "type": "element",
+      "value": "diagram",
+      "box_2d": [732, 157, 856, 573],
+      "label": "diagram"
+    },
+    {
+      "type": "text",
+      "value": "চিত্র ১.১১ : কাগজ দিয়ে স্লাইড ক্যালিপার্স তৈরি।",
+      "box_2d": [901, 324, 917, 685]
+    },
+    {
+      "type": "text",
+      "value": "৭২০",
+      "box_2d": [912, 927, 947, 942]
+    }
+  ]
+}

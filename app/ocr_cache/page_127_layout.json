@@ -1,0 +1,100 @@
+{
+  "segments": [
+    {
+      "type": "text",
+      "value": "কাজ, ক্ষমতা ও শক্তি"
+    },
+    {
+      "type": "text",
+      "value": "১২৩"
+    },
+    {
+      "type": "element",
+      "box_2d": [
+        113,
+        333,
+        177,
+        561
+      ],
+      "label": "heading with icon"
+    },
+    {
+      "type": "element",
+      "box_2d": [
+        203,
+        103,
+        258,
+        896
+      ],
+      "label": "heading with icon"
+    },
+    {
+      "type": "text",
+      "value": "১. সঠিক উত্তরটির পাশে টিক ( √ ) চিহ্ন দাও"
+    },
+    {
+      "type": "text",
+      "value": "কাজের একক কোনটি?"
+    },
+    {
+      "type": "text",
+      "value": "(ক) জুল"
+    },
+    {
+      "type": "text",
+      "value": "(খ) নিউটন"
+    },
+    {
+      "type": "text",
+      "value": "(গ) কেলভিন"
+    },
+    {
+      "type": "text",
+      "value": "(ঘ) ওয়াট"
+    },
+    {
+      "type": "text",
+      "value": "২. 5 kg ভরের একটি বস্তুকে 20 cm, 30 cm, 40 cm ও 50 cm উপরে রাখা হলো। কোন অবস্থানে তার বিভব শক্তি সবচেয়ে বেশি?"
+    },
+    {
+      "type": "text",
+      "value": "(ক) 20 cm"
+    },
+    {
+      "type": "text",
+      "value": "(খ) 30 cm"
+    },
+    {
+      "type": "text",
+      "value": "(গ) 40 cm"
+    },
+    {
+      "type": "text",
+      "value": "(ঘ) 50 cm"
+    },
+    {
+      "type": "text",
+      "value": "৩. একটি স্প্রিংকে টান টান করলে এর মধ্যে কোন শক্তি জমা থাকে?"
+    },
+    {
+      "type": "text",
+      "value": "(ক) গতিশক্তি"
+    },
+    {
+      "type": "text",
+      "value": "(খ) বিভব শক্তি"
+    },
+    {
+      "type": "text",
+      "value": "(গ) তাপশক্তি"
+    },
+    {
+      "type": "text",
+      "value": "(ঘ) রাসায়নিক শক্তি"
+    },
+    {
+      "type": "text",
+      "value": "২০২৩"
+    }
+  ]
+}
