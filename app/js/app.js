@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentChapterIndex = 0;
   let currentTab = 'book'; // 'book', 'lab', 'traps', 'olympiad', 'formulas'
   let currentBookPage = 5; // Default starts at page 5 (Chapter 1)
-  let isBookSinglePane = localStorage.getItem('physics_book_single_pane') === 'true';
+  let isBookSinglePane = localStorage.getItem('physics_book_single_pane') !== 'false'; // Default TRUE (closed right panel, full book page)
   let isFitPageMode = localStorage.getItem('physics_book_fit_mode') === 'page';
 
   // Book Page Annotations (Adobe Acrobat Style)
@@ -977,6 +977,53 @@ document.addEventListener('DOMContentLoaded', () => {
       } catch (e) {
         return [];
       }
+    },
+
+    async exportBackup() {
+      const backup = {
+        version: 1,
+        exportedAt: new Date().toISOString(),
+        annotations: {},
+        notes: {}
+      };
+      for (let i = 0; i < localStorage.length; i++) {
+        const k = localStorage.key(i);
+        if (k.startsWith('physics_page_annot_')) {
+          backup.annotations[k] = localStorage.getItem(k);
+        } else if (k.startsWith('physics_page_notes_')) {
+          try {
+            backup.notes[k] = JSON.parse(localStorage.getItem(k));
+          } catch (e) {}
+        }
+      }
+      return JSON.stringify(backup, null, 2);
+    },
+
+    async importBackup(jsonString) {
+      try {
+        const data = JSON.parse(jsonString);
+        if (data.annotations) {
+          for (const k in data.annotations) {
+            localStorage.setItem(k, data.annotations[k]);
+            const pageMatch = k.match(/physics_page_annot_(\d+)/);
+            if (pageMatch) {
+              await this.save(parseInt(pageMatch[1], 10), data.annotations[k]);
+            }
+          }
+        }
+        if (data.notes) {
+          for (const k in data.notes) {
+            localStorage.setItem(k, JSON.stringify(data.notes[k]));
+            const pageMatch = k.match(/physics_page_notes_(\d+)/);
+            if (pageMatch) {
+              await this.saveNotes(parseInt(pageMatch[1], 10), data.notes[k]);
+            }
+          }
+        }
+        return true;
+      } catch (e) {
+        return false;
+      }
     }
   };
 
@@ -1035,21 +1082,28 @@ document.addEventListener('DOMContentLoaded', () => {
     function setCanvasResolution() {
       const nw = img.naturalWidth || 1088;
       const nh = img.naturalHeight || 1425;
-      if (canvas.width !== nw || canvas.height !== nh) {
+      let changed = false;
+      if (nw > 0 && nh > 0 && (canvas.width !== nw || canvas.height !== nh)) {
         canvas.width = nw;
         canvas.height = nh;
+        changed = true;
       }
-      if (previewCanvas && (previewCanvas.width !== nw || previewCanvas.height !== nh)) {
+      if (previewCanvas && nw > 0 && nh > 0 && (previewCanvas.width !== nw || previewCanvas.height !== nh)) {
         previewCanvas.width = nw;
         previewCanvas.height = nh;
+        changed = true;
       }
-      loadCurrentPageAnnotation();
+      if (changed) {
+        loadCurrentPageAnnotation();
+      }
     }
+
+    loadCurrentPageAnnotation();
 
     if (img.complete && img.naturalWidth > 0) {
       setCanvasResolution();
     } else {
-      img.onload = setCanvasResolution;
+      img.addEventListener('load', () => setCanvasResolution(), { once: true });
     }
 
     function getCoords(e) {
@@ -1721,6 +1775,10 @@ document.addEventListener('DOMContentLoaded', () => {
               <button class="annot-action-btn" id="annotBtnClear" title="এই পাতার সব দাগ মুছুন">
                 <span>🗑️</span>
               </button>
+              <button class="annot-action-btn" id="annotBtnBackup" title="দাগ ও নোট ব্যাকআপ বা ট্রান্সফার (Export / Import)">
+                <span>💾⇄</span>
+              </button>
+              <input type="file" id="annotFileInput" accept=".json" style="display:none;">
 
               <div class="annot-save-pill" id="annotSaveStatus" title="পিসিতে স্থায়ীভাবে সংরক্ষিত (Auto-Saved)">
                 <span class="save-icon">💾</span>
@@ -1753,8 +1811,8 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="page-image-scroll ${isFitPageMode ? 'fit-page' : ''}" id="pageImageScrollContainer">
               <div class="book-page-canvas-wrapper" id="bookCanvasWrapper">
                 <img id="scannedBookPageImg" class="book-page-img" src="${pageImgUrl}" alt="Page ${currentBookPage + 1}">
-                <canvas id="bookAnnotateCanvas" class="book-annotate-canvas"></canvas>
-                <canvas id="bookPreviewCanvas" class="book-preview-canvas"></canvas>
+                <canvas id="bookAnnotateCanvas" class="book-annotate-canvas" width="1088" height="1425"></canvas>
+                <canvas id="bookPreviewCanvas" class="book-preview-canvas" width="1088" height="1425"></canvas>
                 <div id="bookNotesLayer" class="book-notes-layer"></div>
               </div>
             </div>
@@ -1766,6 +1824,12 @@ document.addEventListener('DOMContentLoaded', () => {
               </svg>
             </button>
           </div>
+
+          <!-- Floating Splitter Toggle Tab on the Seam (চিহ্নিত অংশের বাটন) -->
+          <button class="btn-side-pane-toggle" id="btnSidePaneToggle" title="${isBookSinglePane ? 'ডিজিটাল টেক্সট ও ভিডিও প্যানেল খুলুন' : 'ডিজিটাল প্যানেল বন্ধ করুন (বই বড় করুন)'}">
+            <span class="toggle-icon">${isBookSinglePane ? '◀' : '▶'}</span>
+            <span class="toggle-label">${isBookSinglePane ? 'ডিজিটাল প্যানেল' : 'বন্ধ করুন'}</span>
+          </button>
         </div>
 
         <!-- Right: Structured Text, Math & Video Lecture Panel -->
@@ -1874,13 +1938,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Toggle Single Pane / Full Width Reader
-    document.getElementById('btnToggleSinglePane')?.addEventListener('click', () => {
+    function toggleSinglePaneMode() {
       isBookSinglePane = !isBookSinglePane;
       try {
         localStorage.setItem('physics_book_single_pane', String(isBookSinglePane));
       } catch (e) {}
       const readerContainer = document.querySelector('.book-reader-container');
       const paneBtn = document.getElementById('btnToggleSinglePane');
+      const sideToggle = document.getElementById('btnSidePaneToggle');
       if (readerContainer) {
         if (isBookSinglePane) {
           readerContainer.classList.add('single-book-mode');
@@ -1894,6 +1959,53 @@ document.addEventListener('DOMContentLoaded', () => {
           <span id="paneLabel" style="font-weight:600;">${isBookSinglePane ? 'দ্বৈত' : 'একক'}</span>
         `;
         paneBtn.title = isBookSinglePane ? 'দ্বৈত ভিউতে ফিরুন (বই + ডিজিটাল লেআউট)' : 'শুধু মূল বই পুরো পর্দা জুড়ে দেখুন';
+      }
+      if (sideToggle) {
+        sideToggle.innerHTML = `
+          <span class="toggle-icon">${isBookSinglePane ? '◀' : '▶'}</span>
+          <span class="toggle-label">${isBookSinglePane ? 'ডিজিটাল প্যানেল' : 'বন্ধ করুন'}</span>
+        `;
+        sideToggle.title = isBookSinglePane ? 'ডিজিটাল টেক্সট ও ভিডিও প্যানেল খুলুন' : 'ডিজিটাল প্যানেল বন্ধ করুন (বই বড় করুন)';
+      }
+    }
+
+    document.getElementById('btnToggleSinglePane')?.addEventListener('click', toggleSinglePaneMode);
+    document.getElementById('btnSidePaneToggle')?.addEventListener('click', toggleSinglePaneMode);
+
+    // Annotations Backup & Transfer (Export / Import)
+    document.getElementById('annotBtnBackup')?.addEventListener('click', async () => {
+      const choice = confirm('আপনি কি এই বইয়ের সমস্ত দাগানো অংশ ও নোট ব্যাকআপ ফাইল আকারে ডাউনলোড (Export) করতে চান?\n\n(অন্য কোনো ব্রাউজার বা ডিভাইসে সেভ করা ব্যাকআপ আপলোড করতে Cancel চাপুন)');
+      if (choice) {
+        const json = await AnnotationsStore.exportBackup();
+        const blob = new Blob([json], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `physics_annotations_backup_${Date.now()}.json`;
+        a.click();
+        URL.revokeObjectURL(url);
+      } else {
+        const doImport = confirm('আপনার কম্পিউটার থেকে আগের সেভ করা ব্যাকআপ ফাইলটি এখানে লোড (Import) করতে চান?');
+        if (doImport) {
+          document.getElementById('annotFileInput')?.click();
+        }
+      }
+    });
+
+    document.getElementById('annotFileInput')?.addEventListener('change', async (e) => {
+      const file = e.target.files && e.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = async (ev) => {
+          const success = await AnnotationsStore.importBackup(ev.target.result);
+          if (success) {
+            alert('আপনার সমস্ত দাগ ও নোট সফলভাবে লোড হয়েছে!');
+            renderBookView(container, ch);
+          } else {
+            alert('ফাইলটি সঠিক ব্যাকআপ ফাইল নয়।');
+          }
+        };
+        reader.readAsText(file);
       }
     });
 
